@@ -1,0 +1,38 @@
+# nc_cutout example configuration file
+# All settings here can be overridden by command-line arguments.
+# Pass this file with:  nc_cutout catalogue.csv --goods-s-dir /... --goods-n-dir /... --config example_config.yaml
+
+catalogue:
+  # Column names in the source catalogue CSV
+  id_column: "ID_1"
+  ra_column: "RA"
+  dec_column: "DEC"
+  survey_column: "SURVEY"
+
+  # Survey tags used to assign sources to GOODS-S
+  goods_s_surveys:
+    - "goods-s-deephst"
+    - "goods-s-deepjwst"
+    - "goods-s-ultradeep"
+    - "goods-s-mediumhst"
+    - "goods-s-mediumjwst"
+
+  # Survey tags used to assign sources to GOODS-N
+  goods_n_surveys:
+    - "goods-n-mediumhst"
+    - "goods-n-mediumjwst"
+
+images:
+  # HDU extension name containing the science data in the FITS files
+  sci_extension: "SCI"
+  # Index (0-based) in the underscore-split filename that gives the filter name.
+  # For JADES filenames like  <field>_<FILTER>_<...>.fits  this is 1.
+  filter_field_index: 1
+
+output:
+  # Base output directory; filter-specific sub-directories are created automatically
+  dir: "./cutouts"
+
+cutout:
+  # Side length of each square cutout in arcseconds
+  size_arcsec: 2.0
