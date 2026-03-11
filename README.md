@@ -31,7 +31,7 @@
 Clone the repository and install in editable mode:
 
 ```bash
-git clone https://github.com/<your-org>/nc_cutout.git
+git clone https://github.com/aayush3009/nc_cutout.git
 cd nc_cutout
 pip install -e .
 ```
@@ -39,7 +39,7 @@ pip install -e .
 Or install directly from GitHub:
 
 ```bash
-pip install git+https://github.com/<your-org>/nc_cutout.git
+pip install git+https://github.com/aayush3009/nc_cutout.git
 ```
 
 ---
